@@ -1,13 +1,38 @@
-/*#container {
+#container {
 	justify-content: center;
 }
 
 .todoListMain {
 	position: relative;
-	width: 480px;
+	width: 720px;
+	height: auto;
+	padding-bottom: 5px;
+
 	background-color: #e7e7e7;
 	border-radius: 10px;
-}*/
+}
+
+.todoListMain .title .head {
+	background-color: blue;
+}
+
+.todoListMain .title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 28px;
+	font-weight: bold;
+	background-color: #007bb8;
+	padding: 20px;
+	margin-bottom: 40px;
+
+}
+
+.item-text {
+	margin: 0 15px;
+	/*padding: 0 15px;*/
+	overflow-wrap: break-word;
+	white-space: normal;
+}
 
 .todoListMain .header input {
 	padding: 10px;
@@ -16,7 +41,7 @@
 	width: 165px;
 }
 
-.todoListMain .header button {
+.todoListMain .header button.submit {
 	padding: 10px;
 	font-size: 16px;
 	margin: 10px;
@@ -26,7 +51,7 @@
 	border: 2px solid #0066FF;
 }
 
-.todoListMain .header button:hover {
+.todoListMain .header button.submit:hover {
 	background-color: #003399;
 	border: 2px solid #003399;
 	cursor: pointer;
@@ -35,20 +60,52 @@
 .todoListMain .theList li {
 	color: #333;
 	background-color: rgba(255, 255, 255, 0.5);
-	padding: 15px;
+	/*padding: 5px;*/
+	margin: auto;
 	margin-bottom: 15px;
-	/*width: 75%;*/
-	border-radius: 5px;
+	width: 80%;
+	border-radius: 10px;
 	list-style: none;
-
-	transition: background-color 0.2s ease-out;
-}
-
-.todoListMain .theList li:hover {
-	background-color: pink;
-	cursor: pointer;
 }
 
 ul.theList {
 	padding: 0;
+}
+
+.theList button {
+	background-color: #f3f3f3;
+	color: #000;
+	border: 2px solid #f3f3f3;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+
+}
+
+.fa-check:hover {
+	color: green;
+	transition: color 0.5s ease-in;
+}
+
+.theList .fa-close {
+	float: right;
+}
+
+.fa-close:hover {
+	color: red;
+	transition: color 0.5s ease;
+}
+
+form {
+	text-align: center;
+}
+
+.todoListMain .footer {
+	margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 720px) {
+	.todoListMain {
+		width: auto;
+	}
 }

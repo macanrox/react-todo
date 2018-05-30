@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FlipMove from 'react-flip-move';	//library for list animation
+import { FaClose, FaCheck } from 'react-icons/lib/fa';	//imports icons
 
 class Todoitems extends Component {
 	constructor (props) {
@@ -9,8 +10,17 @@ class Todoitems extends Component {
 	}
 
 	createTasks (item) {
-		return <li onClick={() => this.delete(item.key)} 
-				   key={item.key}>{item.text}</li>
+		return <li>
+				    <button className="fa-check">
+				    	<FaCheck />
+				    </button>
+				    <span className="item-text">{item.text}</span>
+				   	<button className="fa-close"
+				   			onClick={() => this.delete(item.key)}
+				   			key={item.key}>
+				   		<FaClose />
+				   	</button>
+				</li>
 	}
 
 	delete (key) {
